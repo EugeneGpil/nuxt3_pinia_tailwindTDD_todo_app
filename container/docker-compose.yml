@@ -19,3 +19,4 @@ services:
     restart: unless-stopped
     ports:
       - "24678:24678" # for vite websocket
+      - "${NUXT_PORT}:3000"
