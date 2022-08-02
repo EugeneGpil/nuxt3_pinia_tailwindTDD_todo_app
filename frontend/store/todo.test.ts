@@ -1,20 +1,14 @@
 import {setActivePinia, createPinia} from 'pinia'
 import {describe, test, expect, beforeAll} from 'vitest'
+import {useTodoStore} from '~/store/todo'
 
 beforeAll(() => {
-    setActivePinia(createPinia())
+  setActivePinia(createPinia())
 })
 
-// describe('useTodoStore', () => {
-//     test('creates a store', () => {
-//
-//     })
-// })
-
-
-
-describe('runs', () => {
-    test('it works', () => {
-        (expect(true) as Vi.Assertion).toBe(true)
-    }, 60 * 1000)
+describe('useTodoStore', () => {
+  test('creates a store', () => {
+    const store = useTodoStore();
+    (expect(store) as Vi.Assertion).toBeDefined()
+  }, undefined)
 })
